@@ -8,8 +8,8 @@ import { profilePicture } from '../utils/constants';
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
-  // const location = useLocation();
-  // var username = location.state.id;
+  const thisPage = useLocation();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -49,7 +49,7 @@ const SearchBar = () => {
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Link to="/Login">
-          <Avatar alt="" src={profilePicture} sx={{ width: 34, height: 34, mr: 4 }} />
+          <Avatar alt={(thisPage.state === null) ? "" : thisPage.state.id} src={profilePicture} sx={{ width: 34, height: 34, mr: 4 }} />
         </Link>
       </Box>
     </Box>
