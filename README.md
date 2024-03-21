@@ -20,3 +20,5 @@ This README file provides an overview of the Pixillion project, its features, an
 - Material-UI
 - YouTube Data API
 - Axios (for API requests)
+- Node.js & Express.js server
+- MongoDB database
