@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { IconButton, InputBase, Box, Avatar } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -8,6 +8,7 @@ import { profilePicture } from '../utils/constants';
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
+  const thisPage = useLocation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,7 +48,9 @@ const SearchBar = () => {
         </IconButton>
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <Avatar alt="Profile Picture" src={profilePicture} sx={{ width: 34, height: 34, mr: 4 }} />
+        <Link to="/Login">
+          <Avatar alt={(thisPage.state === null) ? "" : thisPage.state.id} src={profilePicture} sx={{ width: 34, height: 34, mr: 4 }} />
+        </Link>
       </Box>
     </Box>
   );
