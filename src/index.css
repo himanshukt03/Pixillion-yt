@@ -38,6 +38,14 @@ a {
   height: 77vh !important;
   width: 100% !important;
 }
+.login-heading {
+  color: #7d13ff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
 
 .search-bar{
   border:none;
