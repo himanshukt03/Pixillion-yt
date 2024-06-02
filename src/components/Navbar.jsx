@@ -10,18 +10,19 @@ const Navbar = () => (
     p={2}
     sx={{
       position: "sticky",
-      background: '#0000',
+      background: 'rgba(0, 0, 0, 0.8)', 
       top: 0,
-      justifyContent: "space-between"
+      zIndex: 10,
+      justifyContent: "space-between",
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
     }}
   >
     <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-      <img src={logo} alt="logo" height={45} />
+      <img src={logo} alt="logo" height={45} style={{ marginRight: '8px' }} />
       <Typography
         variant="h5"
         fontWeight="bold"
         color="white"
-        ml={1}
         sx={{ display: { xs: 'none', md: 'block' } }}
       >
         Pixillion
